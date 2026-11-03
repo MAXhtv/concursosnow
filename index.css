@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #0b1120;
+    --card: #151f32;
+    --card-hover: #1c2940;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --text: #f1f5f9;
+    --secondary: #94a3b8;
+    --border: #26364e;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px 7%;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+   PESQUISA
+========================= */
+
+.search {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search > input {
+    width: 100%;
+    padding: 17px 20px;
+    margin-bottom: 25px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.search > input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.search > input::placeholder {
+    color: var(--secondary);
+}
+
+/* =========================
+   CONTAINER DOS FILTROS
+========================= */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* =========================
+   CARTÕES DOS FILTROS
+========================= */
+
+.btn {
+    display: block;
+    padding: 22px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--card-hover);
+    border-color: var(--primary);
+}
+
+.btn p1 {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   OPÇÕES E CHECKBOXES
+========================= */
+
+.btn label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+
+    min-width: 85px;
+    margin: 0 12px 12px 0;
+
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn input[type="checkbox"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+/* =========================
+   BOTÃO PROCURAR
+========================= */
+
+.button {
+    display: block;
+    width: 100%;
+    margin-top: 22px;
+    padding: 16px;
+    background: var(--primary);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+
+.result {
+    max-width: 1200px;
+    margin: 35px auto 0;
+}
+
+#resultList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    list-style: none;
+}
+
+#resultList li {
+    padding: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: 0.2s;
+}
+
+#resultList li:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+}
+
+#resultList h3 {
+    margin-bottom: 18px;
+    color: white;
+    font-size: 19px;
+}
+
+#resultList p {
+    margin-bottom: 10px;
+    color: var(--secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#resultList a {
+    display: inline-block;
+    margin: 12px 8px 0 0;
+    padding: 10px 14px;
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 8px;
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#resultList a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   ELEMENTOS OCULTOS
+========================= */
+
+.hide {
+    display: none !important;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 750px) {
+    body {
+        padding: 25px 5%;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+
+    #resultList {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: 18px;
+    }
+
+    #resultList li {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 20px 4%;
+    }
+
+    #resultList a {
+        margin-right: 4px;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}

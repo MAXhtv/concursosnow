@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concursos</title>
+    <link rel="stylesheet" href="./index.css">
+
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="search">
+        <input type="search" id="procurarProff" name="procurarProff" placeholder="pesquisar.."/>
+        <div class="buttons">
+
+                <div class="btn" id="esfera">
+                    <p1>ESFERA (FEDERAL, MUNICIPAL, ESTADUAL)</p1><br>
+                    <label><input type="checkbox" class="filtro-esfera" value="federal">FEDERAL</input></label>
+                    <label><input type="checkbox" class="filtro-esfera" value="estadual">ESTADUAL</input></label>
+                    <label><input type="checkbox" class="filtro-esfera" value="municipal">MUNICIPAL</input></label>
+                </div>
+
+            <div class="btn" id="area">
+                <p1>AREA (SAUDE, SEGURANCA...)</p1><br>
+                <label><input type="checkbox" class="filtro-area" value="segurança pública">SEGURANCA PUBLICA</input></label>
+                <label><input type="checkbox" class="filtro-area" value="tribunais">TRIBUNAIS</input></label>
+                <label><input type="checkbox" class="filtro-area" value="administrativo">ADMINISTRATIVO</input></label>
+            </div>
+
+            <div class="btn" id="estado">
+                <p1>ESTADO (RJ, SP, PE)</p1>
+                <label><input type="checkbox" class="filtro-regiao" value="ac">AC</label>
+                <label><input type="checkbox" class="filtro-regiao" value="al">AL</label>
+                <label><input type="checkbox" class="filtro-regiao" value="ap">AP</label>
+                <label><input type="checkbox" class="filtro-regiao" value="am">AM</label>
+                <label><input type="checkbox" class="filtro-regiao" value="ba">BA</label>
+                <label><input type="checkbox" class="filtro-regiao" value="ce">CE</label>
+                <label><input type="checkbox" class="filtro-regiao" value="df">DF</label>
+                <label><input type="checkbox" class="filtro-regiao" value="es">ES</label>
+                <label><input type="checkbox" class="filtro-regiao" value="go">GO</label>
+                <label><input type="checkbox" class="filtro-regiao" value="ma">MA</label>
+                <label><input type="checkbox" class="filtro-regiao" value="mt">MT</label>
+                <label><input type="checkbox" class="filtro-regiao" value="ms">MS</label>
+                <label><input type="checkbox" class="filtro-regiao" value="mg">MG</label>
+                <label><input type="checkbox" class="filtro-regiao" value="pa">PA</label>
+                <label><input type="checkbox" class="filtro-regiao" value="pb">PB</label>
+                <label><input type="checkbox" class="filtro-regiao" value="pr">PR</label>
+                <label><input type="checkbox" class="filtro-regiao" value="pe">PE</label>
+                <label><input type="checkbox" class="filtro-regiao" value="pi">PI</label>
+                <label><input type="checkbox" class="filtro-regiao" value="rj">RJ</label>
+                <label><input type="checkbox" class="filtro-regiao" value="rn">RN</label>
+                <label><input type="checkbox" class="filtro-regiao" value="rs">RS</label>
+                <label><input type="checkbox" class="filtro-regiao" value="ro">RO</label>
+                <label><input type="checkbox" class="filtro-regiao" value="rr">RR</label>
+                <label><input type="checkbox" class="filtro-regiao" value="sc">SC</label>
+                <label><input type="checkbox" class="filtro-regiao" value="sp">SP</label>
+                <label><input type="checkbox" class="filtro-regiao" value="se">SE</label>
+                <label><input type="checkbox" class="filtro-regiao" value="to">TO</label>
+            </div>
+
+        </div>
+        <button class="button" id="procurar" >procurar</button>
+    </div>
+    <div class="result">
+        <ul id="resultList">
+        </ul>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>
