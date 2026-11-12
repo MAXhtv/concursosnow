@@ -74,13 +74,27 @@ function indexarGeral(){
     return resultGeneral
 }
 
+//funcao de pesquisa
+function search(){
+  let input=document.getElementById('barraPesquisa').value
+  input=input.toLowerCase().substring(0, 2000)
+  let list=document.getElementById('resultList').children
+  
+  for(i=0; i<list.length; i++) {
+    if (!list[i].innerHTML.toLowerCase().includes(input)) {
+      list[i].style.display="none"
+    } else {
+      list[i].style.display="list-item"
+    }
+  }
+}
 
 
 
 //vai filtrar as provas e percorrer no .json tlgd
 function filterProvas(){
     let filtros=indexarGeral()
-
+    let input = document.getElementById('barraPesquisa').value.toLowerCase().trim()
     let valoresEsfera=filtros[0]
     let valoresArea=filtros[1]
     let valoresRegiao=filtros[2]
@@ -89,7 +103,8 @@ function filterProvas(){
         let esferaValida=valoresEsfera.length===0||valoresEsfera.includes(provasWGab.esfera.toLowerCase())
         let areaValida=valoresArea.length===0||valoresArea.includes(provasWGab.area.toLowerCase())
         let regiaoValida=valoresRegiao.length===0||valoresRegiao.includes(provasWGab.estado.toLowerCase())
-        return esferaValida && areaValida && regiaoValida
+        let inputText=provasWGab.concurso.toLowerCase().includes(input)
+        return esferaValida && areaValida && regiaoValida && inputText
     })
     console.log(resultados)
     exibirResultados(resultados)
@@ -135,5 +150,6 @@ function exibirResultados(resultados) {
     })
 }
 
+document.getElementById('barraPesquisa').addEventListener('input', filterProvas)
 botaoEnviar.addEventListener("click", filterProvas)
 loadProvas()
