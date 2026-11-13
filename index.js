@@ -137,11 +137,11 @@ function exibirResultados(resultados) {
             <p>Área: ${concurso.area}</p>
             <p>Esfera: ${concurso.esfera}</p>
 
-            <a href="${concurso.prova_url}" target="_blank">
+            <a href="${concurso.prova}" target="_blank">
                 Baixar prova
             </a></br>
 
-            <a href="${concurso.gabarito_url}" target="_blank">
+            <a href="${concurso.gabarito}" target="_blank">
                 Baixar gabarito
             </a>
         `
