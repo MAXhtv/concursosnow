@@ -1,5 +1,5 @@
 {
-  "total": 103,
+  "total": 105,
   "provas": [
     {
       "id": 1,
@@ -1339,6 +1339,32 @@
       "prova": "https://nucepe.uespi.br/pmpi2021/",
       "gabarito": "https://nucepe.uespi.br/pmpi2021/",
       "id": 103
-    }
+    },
+    {
+    "id": 104,
+    "concurso": "Polícia Militar de Pernambuco (PMPE) 2024",
+    "cargo": "Soldado (Praça)",
+    "ano": 2024,
+    "esfera": "estadual",
+    "estado": "pe",
+    "regiao": "nordeste",
+    "area": "segurança pública",
+    "banca": "Instituto AOCP",
+    "prova": "https://link.institutoaocp.org.br/visualizar-prova-gabarito-definitivo-public/index.jsp",
+    "gabarito": "https://link.institutoaocp.org.br/visualizar-prova-gabarito-definitivo-public/index.jsp"
+  },
+  {
+    "id": 105,
+    "concurso": "Polícia Militar de Pernambuco (PMPE) 2024",
+    "cargo": "2º Tenente (Oficial QOPM)",
+    "ano": 2024,
+    "esfera": "estadual",
+    "estado": "pe",
+    "regiao": "nordeste",
+    "area": "segurança pública",
+    "banca": "Instituto AOCP",
+    "prova": "https://link.institutoaocp.org.br/visualizar-prova-gabarito-definitivo-public/index.jsp",
+    "gabarito": "https://link.institutoaocp.org.br/visualizar-prova-gabarito-definitivo-public/index.jsp"
+  }
   ]
 }
